@@ -1,0 +1,24 @@
+.homeDesign {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 85vh;
+    width: 100vw;
+
+    background-color: lightcyan;
+}
+
+.rosterDesign {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.loadingGif {
+    height: 15em;
+}

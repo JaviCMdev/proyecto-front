@@ -1,0 +1,11 @@
+
+.inputDesign {
+
+    width: 18em;
+    border-radius: 1em;
+
+}
+
+.inputDesignError {
+    border: 0.2em solid red;
+}
