@@ -47,9 +47,9 @@ export const postRent = async (body, token) => {
 
 
     //Las dos líneas que hay a continuación hacen referencia a poder hacer el pedido en este caso ya que no dispongo de una API
-    const resultado = {data: 'El pedido se ha realizado correctamente'}
+    const resultado = { data: 'El pedido se ha realizado correctamente' }
     return resultado;
-    
+
 }
 
 
@@ -61,20 +61,23 @@ export const allUsersAdmin = async (token) => {
 
     let config = {
         method: 'post', //aqui especifico el protocolo http
-        url : `${root}admin/allUsers`, //este sería mi endpoint del backend de admin que trae todos los users
-        body, //el body que contiene los datos
-        headers: { 
-            'Authorization': 'Bearer ' + token
-          }
+        url: `${root}users/admin/getAll`, //este sería mi endpoint del backend de admin que trae todos los users
+        body: JSON.stringify({
+            "_id":"_id",
+            "rol":"admin"
+        }),
+        headers: {
+            'Authorization': 'Bearer ' + token,
+        }
     }
 
     return await axios.post(config);
 
     const resultado = [
-        {id: 3,name: 'Pepito', surname: 'Garcia', age: 28 },
-        {id: 2,name: 'Pepita', surname: 'Perez', age: 23},
-        {id: 1,name: 'Manolito', surname: 'Sanchez', age: 18},
-        {id: 56,name: 'Manolita', surname: 'Rodriguez', age: 50}
+        { id: 3, name: 'Pepito', surname: 'Garcia', age: 28 },
+        { id: 2, name: 'Pepita', surname: 'Perez', age: 23 },
+        { id: 1, name: 'Manolito', surname: 'Sanchez', age: 18 },
+        { id: 56, name: 'Manolita', surname: 'Rodriguez', age: 50 }
     ];
 
     return resultado;

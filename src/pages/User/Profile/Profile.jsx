@@ -32,7 +32,8 @@ export const Profile = () => {
     return (
         <div className='profileDesign'>
 
-            {userRDX.userPass.name}
+            <div>Nombre: {userRDX.userPass.name}</div>
+            <div>Email: {userRDX.userPass.token.data.userFound[0].email}</div>
         
         </div>
     )

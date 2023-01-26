@@ -9,15 +9,17 @@
     height: 85vh;
     width: 100vw;
 
-    background-color: lightcyan;
+    background-color: rgb(28, 28, 28);
 }
 
 .loginButtonDesign {
 
     height: 3em;
     width: 8em;
+    text-align: center;
 
-    background-color: orange;
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
     cursor: pointer;
 
     border-radius: 1em;
@@ -27,9 +29,11 @@
 
 .loginButtonDesign:hover {
 
+    height: 4em;
+    width: 9em;
     transition: 0.3s;
-
-    background-color: darkorange;
+    background: rgb(218, 154, 182);
+    background: radial-gradient(circle, rgba(218, 154, 182, 1) 0%, rgba(128, 167, 213, 1) 100%);
 }
 
 .errorText {

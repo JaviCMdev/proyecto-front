@@ -1,8 +1,12 @@
 
 .inputDesign {
 
-    width: 18em;
+    width: 28em;
+    height: 2em;
     border-radius: 1em;
+    margin: 0.5em;
+    text-align: center;
+    color: white;
 
 }
 

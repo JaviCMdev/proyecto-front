@@ -24,9 +24,10 @@ export const Register = () => {
         //que los datos se van introduciendo
 
         //Bindear (atar)
-        setUsuario((prevState)=>({...prevState, 
-            [e.target.name] : e.target.value
-            
+        setUsuario((prevState) => ({
+            ...prevState,
+            [e.target.name]: e.target.value
+
         }));;
 
     }
@@ -38,59 +39,62 @@ export const Register = () => {
         error = errorCheck(e.target.name, e.target.value);
 
 
-        setUsuarioError((prevState)=>({...prevState, 
-            [e.target.name + 'Error'] : error
+        setUsuarioError((prevState) => ({
+            ...prevState,
+            [e.target.name + 'Error']: error
         }));
-        
+
+    }
+
+    const signMe = () => {
+
+        postRegistered(usuario)
+            .then(
+
+                newUser => {
+                    console.log(newUser)
+                    setTimeout(() => {
+                        navigate("/")
+                    }, 1000);
+
+
+                }
+            )
+            .catch(error => console.log(error));
     }
 
     return (
         <div className='registerDesign'>
-            {/* <pre>{JSON.stringify(usuario, null, 2)}</pre> */}
-            <InputText 
-                type={'text'} 
-                name={'name'} 
-                className={usuarioError.nameError === '' ? 'inputDesign' : 'inputDesign inputDesignError'} 
-                placeholder={'nombre'} functionHandler={registerInputHandler} 
+            <p>Nombre</p>
+            <InputText
+                type={'text'}
+                name={'name'}
+                className={usuarioError.nameError === '' ? 'inputDesign' : 'inputDesign inputDesignError'}
+                placeholder={'nombre'} functionHandler={registerInputHandler}
                 errorHandler={registerErrorHandler}
             />
             <div className='errorText'>{usuarioError.nameError}</div>
-            <InputText 
-                type={'password'} 
-                name={'password'} 
-                className={usuarioError.passwordError === '' ? 'inputDesign' : 'inputDesign inputDesignError'} 
-                placeholder={'pass'} 
-                functionHandler={registerInputHandler} 
+            <p>Contraseña</p>
+            <InputText
+                type={'password'}
+                name={'password'}
+                className={usuarioError.passwordError === '' ? 'inputDesign' : 'inputDesign inputDesignError'}
+                placeholder={'pass'}
+                functionHandler={registerInputHandler}
                 errorHandler={registerErrorHandler}
             />
             <div className='errorText'>{usuarioError.passwordError}</div>
-            <InputText 
-                type={'text'} 
-                name={'phone'} 
-                className={usuarioError.phoneError === '' ? 'inputDesign' : 'inputDesign inputDesignError'} 
-                placeholder={'telf'} 
-                functionHandler={registerInputHandler} 
-                errorHandler={registerErrorHandler}
-            />
-            <div className='errorText'>{usuarioError.phoneError}</div>
-            <InputText 
-                type={'text'} 
-                name={'country'} 
-                className={usuarioError.countryError === '' ? 'inputDesign' : 'inputDesign inputDesignError'} 
-                placeholder={'pais'} 
-                functionHandler={registerInputHandler} 
-                errorHandler={registerErrorHandler}
-            />
-            <div className='errorText'>{usuarioError.countryError}</div>
-            <InputText 
-                type={'email'} 
-                name={'email'} 
-                className={usuarioError.emailError === '' ? 'inputDesign' : 'inputDesign inputDesignError'} 
-                placeholder={'correo'} 
-                functionHandler={registerInputHandler} 
+            <p>Email</p>
+            <InputText
+                type={'email'}
+                name={'email'}
+                className={usuarioError.emailError === '' ? 'inputDesign' : 'inputDesign inputDesignError'}
+                placeholder={'correo'}
+                functionHandler={registerInputHandler}
                 errorHandler={registerErrorHandler}
             />
             <div className='errorText'>{usuarioError.emailError}</div>
+            <div className='loginButtonDesign' onClick={() => signMe()}>Sign in</div>
         </div>
     );
 };

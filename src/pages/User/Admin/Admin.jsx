@@ -21,7 +21,7 @@ export const Admin = () => {
 
     useEffect(()=>{
         //Me conecto a redux para ver las credenciales de usuario y comprobar que su rol es admin...
-        if(userRDX.userPass.user.rol !== 'admin'){
+        if(userRDX.userPass.token.data.userFound[0].rol !== 'admin'){
             navigate("/");
         }
 
@@ -49,7 +49,7 @@ export const Admin = () => {
                 allUsers.map(
                     user => {
                         return (
-                            <div key={user.id}>{user.name}</div>
+                            <div key={user._id}>{user.name}</div>
                         )
                     }
                 )

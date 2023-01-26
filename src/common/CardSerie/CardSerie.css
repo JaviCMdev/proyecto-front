@@ -6,20 +6,29 @@
     justify-content: center;
     align-items: center;
 
-    height: 12em;
-    width: 8em;
+    height: 8em;
+    width: 20em;
 
-    background-color: darkgrey;
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
 
-    color: white;
-
+    color: rgb(28, 28, 28);
+    transition: 0.3s;
     border-radius: 1em;
 
-    margin: 0.7em;
+    margin: 1em;
+}
+
+.cardSerieDesign:hover {
+    transition: 0.3s;
+    height: 9em;
+    width: 21em;
+    background: rgb(218, 154, 182);
+    background: radial-gradient(circle, rgba(218, 154, 182, 1) 0%, rgba(128, 167, 213, 1) 100%);
 }
 
 .posterDesign {
 
-    height: 7em;
-    width: 5em;
+    height: 5em;
+    width: 15em;
 }

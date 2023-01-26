@@ -104,7 +104,7 @@ export const Header = () => {
 
     return (
         <div className='headerDesign'>
-            <div onClick={()=>ResetHome()} className='logoDesignHeader'><img className='cameraAvatar' src={Logo} alt="Camara"/></div>
+            <div onClick={()=>ResetHome()} className='logoDesignHeader'><img id="logoHome" className='cameraAvatar' src={Logo} alt="Camara"/></div>
             <div className='searchDesign'>
 
                 <InputText 
@@ -122,7 +122,8 @@ export const Header = () => {
 
                 {/* Renderizado condicional por si el usuario es admin y hay que mostrar la sección de Admin */}
 
-                {datosReduxUsuario.userPass.user.rol === "admin" &&
+                {datosReduxUsuario.userPass.token.data.userFound[0].rol === "admin" &&
+                
                 
                     <div onClick={()=>navigate("/admin")} className='linkDesign'>admin</div>
                 
