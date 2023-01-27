@@ -122,7 +122,7 @@ export const Header = () => {
 
                 {/* Renderizado condicional por si el usuario es admin y hay que mostrar la sección de Admin */}
 
-                {datosReduxUsuario.userPass.token.data.userFound[0].rol === "admin" &&
+                {datosReduxUsuario.userPass.rol === "admin" &&
                 
                 
                     <div onClick={()=>navigate("/admin")} className='linkDesign'>admin</div>

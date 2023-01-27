@@ -72,7 +72,8 @@ export const Login = () => {
                     let userPass = {
                         token : resultado,
                         user: decodificado.id,
-                        name: resultado.data.userFound[0].name
+                        name: resultado.data.userFound[0].name,
+                        rol: resultado.data.userFound[0].rol
 
                     }
 

@@ -1,7 +1,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { InputText } from '../../../common/InputText/InputText';
+import { postRegistered } from '../../../services/apiCalls';
 import { errorCheck } from '../../../services/utiles';
+import { useNavigate } from 'react-router-dom';
 import './Register.css';
 
 export const Register = () => {
@@ -17,6 +19,9 @@ export const Register = () => {
         passwordError: '',
         emailError: '',
     })
+
+    const navigate = useNavigate();
+
 
     const registerInputHandler = (e) => {
 

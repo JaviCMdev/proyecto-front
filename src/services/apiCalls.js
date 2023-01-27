@@ -10,7 +10,7 @@ export const postLogin = async (credenciales) => {
     //Devuelvo un token hardcodeado
 };
 
-export const postRegister = async (body) => {
+export const postRegistered = async (body) => {
 
     //A continuación vemos como se enviaría el body por axios para el registro
     return await axios.post(`${root}users/newuser`, body)
