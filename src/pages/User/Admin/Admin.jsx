@@ -5,10 +5,9 @@ import './Admin.css';
 import { useNavigate } from 'react-router-dom';
 
 //Imports RDX
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { userData } from '../userSlice';
 import { allUsersAdmin } from '../../../services/apiCalls';
-import { rentalData } from '../../rentalSlice';
 import { CardRental } from '../../../common/CardRental/CardRental';
 
 
@@ -16,11 +15,10 @@ export const Admin = () => {
 
     //Instancio useNavigate
     const navigate = useNavigate();
-    const dispatch = useDispatch();
 
     //Instancio RDX
     const userRDX = useSelector(userData);
-    const rentalRDX = useSelector(rentalData)
+    // const rentalRDX = useSelector(rentalData)
 
     const [allRentals, setAllRentals] = useState([]);
 
