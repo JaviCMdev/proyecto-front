@@ -76,15 +76,17 @@ export const Home = () => {
 
     return (
         <div className='homeDesign'>
-
             {datosReduxSeries.series.length > 0 ? (
 
                 //Si entramos aqui es porque tenemos series de Redux....
 
                 <div className='rosterDesign'>
+                    
                     {datosReduxSeries.series.map(
                         serie => {
+                            
                             return (
+                                
                                 <div onClick={() => Choosen(serie)} key={serie._id}>
                                     <CardSerie serie={serie} />
                                 </div>

@@ -56,7 +56,6 @@ export const SerieDetail = () => {
         postRent(body, detailUsr.userPass.token.data.token)
         
             .then(resultado => {
-                console.log("entro?")
                 //Esto se ejecutará si el pedido se ha realizado correctamente
                 //mostrando el mensaje
 
@@ -79,6 +78,7 @@ export const SerieDetail = () => {
     return(
         <div className='serieDesign'>
             {detailRdx.choosen.id !== '' &&
+            
             
                 <div className='serieDetailCard'>
                     <div>{detailRdx.choosen.title}</div>

@@ -51,24 +51,24 @@ export const allUsersAdmin = async (token) => {
     //     rol : 'admin'
     // }
 
+    // let config = {
+    //     method: 'post', //aqui especifico el protocolo http
+    //     url: `${root}users/admin`, //este sería mi endpoint del backend de admin que trae todos los users
+    //     body,
+    //     headers: {
+    //         'Authorization': 'Bearer ' + token,
+    //     }
+    // }
     let config = {
-        method: 'post', //aqui especifico el protocolo http
-        url: `${root}users/admin`, //este sería mi endpoint del backend de admin que trae todos los users
-        body,
-        headers: {
-            'Authorization': 'Bearer ' + token,
-        }
+        headers: { 
+            'Authorization': 'Bearer ' + token
+          }
     }
 
+    // return await axios.post(config);
 
-    return await axios.post(config);
+    return await axios.get(`${root}rentals/getAll`, config);
 
-    const resultado = [
-        { _id: '63b6bbaa9d2c9441e219e0e2', name: 'Puquitas', email: 'puquitas@gmail.com' },
-        
-    ];
-
-    return resultado;
 }
 
 

@@ -1,10 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-export const serieSlice = createSlice({
-    name: 'serie',
+export const rentalSlice = createSlice({
+    name: 'rental',
     initialState: {
-      choosen : {},
-      series: []
+      rentals : {},
+      allrentals: []
     },
     reducers: {
       select: (state, action) => {
@@ -18,21 +18,15 @@ export const serieSlice = createSlice({
           ...state,
           ...action.payload
         }
-      },
-      clear: (state, action) => {
-        return {
-          ...state,
-          ...action.payload
-        }
       }
     }
     
 });
 
 //Acciones que modificarán RDX
-export const { select, find, clear } = serieSlice.actions;
+export const { select, find } = rentalSlice.actions;
 
 //Estado del que leeremos RDX
-export const serieData = (state) => state.serie;
+export const rentalData = (state) => state.rental;
 
-export default serieSlice.reducer;
+export default rentalSlice.reducer;

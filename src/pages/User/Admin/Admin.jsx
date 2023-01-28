@@ -5,21 +5,24 @@ import './Admin.css';
 import { useNavigate } from 'react-router-dom';
 
 //Imports RDX
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { userData } from '../userSlice';
 import { allUsersAdmin } from '../../../services/apiCalls';
-import { serieData } from '../../serieSlice';
+import { rentalData } from '../../rentalSlice';
+import { CardRental } from '../../../common/CardRental/CardRental';
+
 
 export const Admin = () => {
 
     //Instancio useNavigate
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     //Instancio RDX
     const userRDX = useSelector(userData);
-    const dataRDX = useSelector(serieData)
+    const rentalRDX = useSelector(rentalData)
 
-    const [allUsers, setAllUsers] = useState([]);
+    const [allRentals, setAllRentals] = useState([]);
 
     useEffect(() => {
         //Me conecto a redux para ver las credenciales de usuario y comprobar que su rol es admin...
@@ -29,39 +32,36 @@ export const Admin = () => {
 
     }, [])
 
-    // useEffect(() => {
+    useEffect(() => {
+        if (allRentals.length === 0) {
 
-    //     if (allUsers.length === 0) {
+            allUsersAdmin()
+                .then(resultado => {
 
-    //         allUsersAdmin()
-    //             .then(resultado => {
+                    //seteo el hook de los usuarios...
+                    setAllRentals(resultado.data);
+                })
+                .catch(error => console.log(error));
+        };
 
-    //                 //seteo el hook de los usuarios...
-    //                 setAllUsers(resultado);
-    //             })
-    //             .catch(error => console.log(error));
-    //     };
+    }, [allRentals]);
 
-    // }, [allUsers]);
 
     return (
         <div className='adminDesign'>
-            <div>
-                patata
-                {console.log(dataRDX)}
+            <div className='rosterDesign'>
+                {allRentals.length > 0 &&
+                    allRentals.map(
+                        rental => {
+                            return (
+                                <div key={rental._id}>
+                                    <CardRental rental={rental} />
+                                </div>
+                            )
+                        }
+                    )
+                }
             </div>
-            {allUsers.length > 0 &&
-
-                allUsers.map(
-                    user => {
-                        return (
-
-                            <div key={user._id}>{user.name}</div>
-                        )
-                    }
-                )
-            }
-
         </div>
     )
 };
