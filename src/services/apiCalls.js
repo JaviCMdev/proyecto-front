@@ -31,15 +31,12 @@ export const getSearch = async (criterioBusqueda) => {
 export const postRent = async (body, token) => {
 
     let config = {
-        method: 'post', //aqui especifico el protocolo http
-        url : `${root}rentals/newRental`, //este sería mi endpoint del backend
-        body, //el body que contiene los datos   HACER VARIABLE CON DATOS
         headers: { 
             'Authorization': 'Bearer ' + token
           }
     }
 
-    return await axios.post(config);
+    return await axios.post(`${root}rentals/newRental`, body, config);
 
 }
 

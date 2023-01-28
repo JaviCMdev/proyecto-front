@@ -48,8 +48,8 @@ export const SerieDetail = () => {
             titleSerie : detailRdx.choosen.title,
             idUser : detailUsr.userPass.user,
             nameUser : detailUsr.userPass.name,
-            rentalDate : dayjs().format('DD/MM/YYYY'),
-            returnDate : dayjs().add(7, 'days').format('DD/MM/YYYY'),
+            rentalDate : dayjs().format('DD-MM-YYYY'),
+            returnDate : dayjs().add(7, 'days').format('DD-MM-YYYY'),
             price : 5 + eu
         }
         {console.log("Datos alquiler",body)}
@@ -93,7 +93,7 @@ export const SerieDetail = () => {
                         <div onClick={()=>RentMe()} className='rentDesign'>ALQUILAME</div>
                     }
 
-                    <div>{msg}</div>
+                    {/* <div>{msg}</div> */}
                 </div>
             
             }

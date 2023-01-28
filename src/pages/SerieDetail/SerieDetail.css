@@ -9,7 +9,7 @@
     height: 85vh;
     width: 100vw;
 
-    background-color: lightcyan;
+    background-color: rgb(28, 28, 28);
 
     font-weight: bolder;
 }
@@ -28,7 +28,7 @@
 
 .detailPoster {
 
-    height: 40vh;
+    height: 10vh;
 }
 
 .rentDesign {
@@ -42,16 +42,19 @@
 
     border-radius: 1em;
 
-    background-color: darkcyan;
-
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
     cursor: pointer;
 
-    transition: 0.2s;
+    transition: 0.3s;
 
     color: white;
 }
 
 .rentDesign:hover {
-    transition: 0.2s;
-    background-color: cyan;
+    height: 3.5em;
+    width: 9em;
+    transition: 0.3s;
+    background: rgb(218, 154, 182);
+    background: radial-gradient(circle, rgba(218, 154, 182, 1) 0%, rgba(128, 167, 213, 1) 100%);
 }
