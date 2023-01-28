@@ -73,8 +73,7 @@ export const Login = () => {
                         token : resultado,
                         user: decodificado.id,
                         name: resultado.data.userFound[0].name,
-                        rol: resultado.data.userFound[0].rol
-
+                        rol: resultado.data.userFound[0].rol,
                     }
 
                     //Finalmente, guardo en RDX....

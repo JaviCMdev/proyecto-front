@@ -40,19 +40,23 @@ export const SerieDetail = () => {
         //porque ahi tendremos la id de user y la id de la peli
 
         //Vamos a recolectar los datos necesarios para hacer el alquiler y enviarlos al servicio
-
+        const eu = "€"
         let body = {
 
             //id de la serie...
-            idSerie : detailRdx.choosen.id,
-            idUser : detailUsr.userPass.user._id,
+            idSerie : detailRdx.choosen._id,
+            titleSerie : detailRdx.choosen.title,
+            idUser : detailUsr.userPass.user,
+            nameUser : detailUsr.userPass.name,
             rentalDate : dayjs().format('DD/MM/YYYY'),
             returnDate : dayjs().add(7, 'days').format('DD/MM/YYYY'),
-            price : 5
+            price : 5 + eu
         }
-
-        postRent(body, detailUsr.userPass.token)
+        {console.log("Datos alquiler",body)}
+        postRent(body, detailUsr.userPass.token.data.token)
+        
             .then(resultado => {
+                console.log("entro?")
                 //Esto se ejecutará si el pedido se ha realizado correctamente
                 //mostrando el mensaje
 
@@ -79,10 +83,10 @@ export const SerieDetail = () => {
                 <div className='serieDetailCard'>
                     <div>{detailRdx.choosen.title}</div>
                     <div><img className='detailPoster' src={`${detailRdx.choosen.poster_path}`}/></div>
+                    <div>{detailRdx.choosen.genre !== '' ? detailRdx.choosen.genre : "No genre available"}</div>
+                    <div>{detailRdx.choosen.year !== '' ? detailRdx.choosen.year : "TBA"}</div>
+                    <div>{detailRdx.choosen.duration !== '' ? detailRdx.choosen.duration : "TBA"}</div>
                     <div>{detailRdx.choosen.description !== '' ? detailRdx.choosen.description : "No overview available"}</div>
-
-                    {/* En caso de que el usuario esté logeado, es decir, tenemos sus credenciales en REDUX, mostraremos
-                    un boton para poder alquilar la película */}
 
                     {detailUsr.userPass.token !== '' &&
                     
