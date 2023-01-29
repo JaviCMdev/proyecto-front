@@ -1,13 +1,9 @@
-
 .profileDesign {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     height: 85vh;
     width: 100vw;
-
     background-color: rgb(28, 28, 28);
 }

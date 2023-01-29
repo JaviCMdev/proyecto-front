@@ -1,20 +1,15 @@
 .cardRentalDesign {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     height: 8em;
     width: 20em;
-
     background: rgb(238, 174, 202);
     background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
-
     color: rgb(28, 28, 28);
     transition: 0.3s;
     border-radius: 1em;
-
     margin: 1em;
 }
 

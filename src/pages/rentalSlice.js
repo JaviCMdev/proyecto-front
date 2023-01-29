@@ -22,11 +22,6 @@ export const rentalSlice = createSlice({
     }
     
 });
-
-//Acciones que modificarán RDX
 export const { select, find } = rentalSlice.actions;
-
-//Estado del que leeremos RDX
 export const rentalData = (state) => state.rental;
-
 export default rentalSlice.reducer;

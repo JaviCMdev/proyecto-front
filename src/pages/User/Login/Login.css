@@ -1,34 +1,25 @@
-
 .loginDesign {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     height: 85vh;
     width: 100vw;
-
     background-color: rgb(28, 28, 28);
 }
 
 .loginButtonDesign {
-
     height: 3em;
     width: 8em;
     text-align: center;
-
     background: rgb(238, 174, 202);
     background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
     cursor: pointer;
-
     border-radius: 1em;
-
     transition: 0.3s;
 }
 
 .loginButtonDesign:hover {
-
     height: 4em;
     width: 9em;
     transition: 0.3s;
@@ -37,6 +28,5 @@
 }
 
 .errorText {
-
     color: red;
 }

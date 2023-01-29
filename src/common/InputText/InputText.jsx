@@ -1,9 +1,7 @@
-
 import React from 'react';
 import './InputText.css';
 
 export const InputText = ({type, name, className, placeholder, functionHandler, errorHandler}) => {
-
     return (
         <input 
             type={type} 

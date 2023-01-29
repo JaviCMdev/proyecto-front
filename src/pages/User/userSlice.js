@@ -1,4 +1,3 @@
-
 import { createSlice } from '@reduxjs/toolkit';
 
 export const userSlice = createSlice({
@@ -26,11 +25,6 @@ export const userSlice = createSlice({
     }
     
 });
-
-//Acciones que modificarán RDX
 export const { login, logout } = userSlice.actions;
-
-//Estado del que leeremos RDX
 export const userData = (state) => state.user;
-
 export default userSlice.reducer;

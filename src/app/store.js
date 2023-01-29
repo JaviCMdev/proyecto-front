@@ -1,8 +1,6 @@
-
 import { configureStore } from '@reduxjs/toolkit';
 import userSlice from '../pages/User/userSlice';
 import serieSlice from '../pages/serieSlice';
-
 import storage from 'redux-persist/lib/storage';
 import { combineReducers } from 'redux';
 import { persistReducer } from 'redux-persist';

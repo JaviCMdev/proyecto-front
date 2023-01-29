@@ -28,11 +28,6 @@ export const serieSlice = createSlice({
     }
     
 });
-
-//Acciones que modificarán RDX
 export const { select, find, clear } = serieSlice.actions;
-
-//Estado del que leeremos RDX
 export const serieData = (state) => state.serie;
-
 export default serieSlice.reducer;

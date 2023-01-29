@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { InputText } from '../../../common/InputText/InputText';
 import { postRegistered } from '../../../services/apiCalls';
@@ -7,13 +6,11 @@ import { useNavigate } from 'react-router-dom';
 import './Register.css';
 
 export const Register = () => {
-
     const [usuario, setUsuario] = useState({
         name: '',
         password: '',
         email: '',
     })
-
     const [usuarioError, setUsuarioError] = useState({
         nameError: '',
         passwordError: '',
@@ -21,48 +18,30 @@ export const Register = () => {
     })
 
     const navigate = useNavigate();
-
-
     const registerInputHandler = (e) => {
-
-        //Manejo la entrada de datos en los input y voy actualizando el hook usuario a medida
-        //que los datos se van introduciendo
-
-        //Bindear (atar)
         setUsuario((prevState) => ({
             ...prevState,
             [e.target.name]: e.target.value
-
         }));;
-
     }
 
     const registerErrorHandler = (e) => {
-
         let error = '';
-
         error = errorCheck(e.target.name, e.target.value);
-
-
         setUsuarioError((prevState) => ({
             ...prevState,
             [e.target.name + 'Error']: error
         }));
-
     }
 
     const signMe = () => {
-
         postRegistered(usuario)
             .then(
-
                 newUser => {
                     console.log(newUser)
                     setTimeout(() => {
                         navigate("/")
                     }, 1000);
-
-
                 }
             )
             .catch(error => console.log(error));

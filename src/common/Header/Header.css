@@ -1,10 +1,8 @@
 .headerDesign {
-
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
     height: 10vh;
     width: 100vw;
     background: rgb(238, 174, 202);
@@ -12,25 +10,19 @@
 }
 
 .logoDesignHeader {
-
     height: 10vh;
     width: 10vw;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .searchDesign {
-
     height: 10vh;
     width: 70vw;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .cameraAvatar {
@@ -38,24 +30,19 @@
 }
 
 .headerLinksDesign {
-
     height: 10vh;
     width: 20vw;
-
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-end;
-
 }
 
 .linkDesign {
-
     font-weight: bold;
     color: black;
     cursor: pointer;
     font-size: 2em;
-
     margin-bottom: 0.5em;
     margin-right: 3em;
 }

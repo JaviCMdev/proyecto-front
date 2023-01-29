@@ -1,53 +1,38 @@
-
 .serieDesign {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     height: 85vh;
     width: 100vw;
-
     background-color: rgb(28, 28, 28);
-
     font-weight: bolder;
 }
 
 .serieDetailCard {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     height: 50vh;
     width: 75vw;
-
 }
 
 .detailPoster {
-
     height: 10vh;
 }
 
 .rentDesign {
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     height: 2.5em;
     width: 8em;
-
     border-radius: 1em;
-
     background: rgb(238, 174, 202);
     background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
     cursor: pointer;
-
     transition: 0.3s;
-
     color: white;
 }
 

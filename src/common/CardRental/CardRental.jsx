@@ -1,9 +1,8 @@
-
 import React from 'react';
 import './CardRental.css';
 
-export const CardRental = ({rental}) => {
-    
+export const CardRental = ({ rental }) => {
+
     return (
         <div className='cardRentalDesign'>
             <div>Datos alquiler</div>
