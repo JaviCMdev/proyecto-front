@@ -39,12 +39,16 @@ export const SerieDetail = () => {
         <div className='serieDesign'>
             {detailRdx.choosen.id !== '' &&
                 <div className='serieDetailCard'>
-                    <div>{detailRdx.choosen.title}</div>
+                    <div>Titulo: {detailRdx.choosen.title}</div>
                     <div><img className='detailPoster' src={`${detailRdx.choosen.poster_path}`} /></div>
-                    <div>{detailRdx.choosen.genre !== '' ? detailRdx.choosen.genre : "No genre available"}</div>
-                    <div>{detailRdx.choosen.year !== '' ? detailRdx.choosen.year : "TBA"}</div>
-                    <div>{detailRdx.choosen.duration !== '' ? detailRdx.choosen.duration : "TBA"}</div>
-                    <div>{detailRdx.choosen.description !== '' ? detailRdx.choosen.description : "No overview available"}</div>
+                    <div>Genero: {detailRdx.choosen.genre !== '' ? detailRdx.choosen.genre : "No genre available"}</div>
+                    <br></br>
+                    <div>Año publicacion: {detailRdx.choosen.year !== '' ? detailRdx.choosen.year : "TBA"}</div>
+                    <br></br>
+                    <div>Duracion media de capitulo: {detailRdx.choosen.duration !== '' ? detailRdx.choosen.duration : "TBA"}</div>
+                    <br></br>
+                    <div>Descripcion: {detailRdx.choosen.description !== '' ? detailRdx.choosen.description : "No overview available"}</div>
+                    <br></br>
                     {detailUsr.userPass.token !== '' &&
                         <div onClick={() => RentMe()} className='rentDesign'>ALQUILAME</div>
                     }

@@ -10,16 +10,21 @@
 }
 
 .serieDetailCard {
+    color:black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 50vh;
     width: 75vw;
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    border-radius: 1em;
+    padding: 5em;
 }
 
 .detailPoster {
-    height: 10vh;
+    height: 20vh;
 }
 
 .rentDesign {

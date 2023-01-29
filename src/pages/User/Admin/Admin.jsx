@@ -29,6 +29,7 @@ export const Admin = () => {
 
     return (
         <div className='adminDesign'>
+            <div>Todos los alquileres</div>
             <div className='rosterDesign'>
                 {allRentals.length > 0 &&
                     allRentals.map(
