@@ -3,7 +3,7 @@
 - La finalidad de este proyecto es mediante el uso de React y Redux conectar la parte frontend con la parte de backend del proyecto realizado anteriormente y asi consumir datos por parte del frontend.
 
 **Tecnologias usadas**
-- React
+- <img src="./assets/icons8-reaccionar.gif" alt=reactlogo/> React
 - Redux
 - JavaScript
 - CSS
