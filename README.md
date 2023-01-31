@@ -3,10 +3,10 @@
 - La finalidad de este proyecto es mediante el uso de React y Redux conectar la parte frontend con la parte de backend del proyecto realizado anteriormente y asi consumir datos por parte del frontend.
 
 **Tecnologias usadas**
-- <img src="./assets/icons8-reaccionar" alt="reactlogo"/> React
-- Redux
-- JavaScript
-- CSS
+- ![icons8-reaccionar](https://user-images.githubusercontent.com/114490860/215772026-6a81f29f-e1d3-45e4-810e-c20179be4547.gif) React
+- ![icons8-redux-48](https://user-images.githubusercontent.com/114490860/215772075-f3e155c4-94b4-4ce9-97f2-c8b94fb264b7.png) Redux
+- ![icons8-javascript](https://user-images.githubusercontent.com/114490860/215772118-a4bf21d3-04ad-4d4c-aa72-5012bc5fed34.gif) JavaScript
+- ![icons8-css3-48](https://user-images.githubusercontent.com/114490860/215772147-2b1d1e97-22f1-4e99-8685-2ce2282a875a.png) CSS
 
 **Vistas**
 - Home: Es la vista principal del proyecto, por defecto las series que tenemos las traemos con un GET.
