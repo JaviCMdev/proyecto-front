@@ -14,7 +14,7 @@ export const getSeries = async () => {
 }
 
 export const getSearch = async (criterioBusqueda) => {
-    return await axios.get(`${root}series/getall?title=${criterioBusqueda}&genre=${criterioBusqueda}`);
+    return await axios.get(`${root}series/getallSeries?title=${criterioBusqueda}&genre=${criterioBusqueda}`);
 }
 
 export const postRent = async (body, token) => {
