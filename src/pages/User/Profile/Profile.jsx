@@ -14,8 +14,6 @@ export const Profile = () => {
     useEffect(() => {
         if (userRDX.userPass.token === '') {
             navigate("/");
-        } else {
-            console.log(userRDX.userPass);
         }
     }, []);
 
